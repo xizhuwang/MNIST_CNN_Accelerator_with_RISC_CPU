@@ -1,6 +1,7 @@
 # MNIST_CNN_Accelerator_with_RISC_CPU
 > **Disclaimer**  
-> This document is part of the coursework for **Low Power SOC Design Lab 2** at National Taiwan University of Science and technology.  
+> This document is part of the coursework for **Low Power SOC Design Lab 2** at National Taiwan University of Science and technology.
+> Process: TSMC 16nm ADFP.
 > Authors: **Wei-Wen Lin** and **Xi-Zhu Wang**.
 
 ## 1. Discuss of the RTL Design
@@ -135,11 +136,11 @@
 
 ---
 
-## 3. Area, Power, Leakage Power
+## 3. Area, Power, Leakage Power(TSMC 16nm ADFP) 
 
 - Advantage: MNIST Dataset without Preprocessing
 - High Accuracy: Train Accuracy                           88%
-- 		    Validation Accuracy                   89%
+ 		              Validation Accuracy                   89%
 - Area:                                                 13440.097 um2
 - Frequency:                                           99.9703 MHz
 - Dynamic Power:                                     2.463313 W
@@ -157,6 +158,7 @@
 ## 4. RTL Waveform
 <img width="1727" height="709" alt="螢幕擷取畫面 2025-07-11 145540" src="https://github.com/user-attachments/assets/20d5fc1f-f5dd-49d2-9e85-511d262ef4cb" />
 
+已完成Post sim，程式的ram需替換成adfp中的sram，怕有授權問題這邊僅提供Modelsim的波形供參考。
 ---
 
 ## 5.Optimization
