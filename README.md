@@ -73,6 +73,7 @@
 
 ## ⚫ AI Accelerator 硬體架構設計
 <img width="692" height="773" alt="image" src="https://github.com/user-attachments/assets/7996cef0-acef-4aa4-8d44-637cf73ef49b" />
+
 - 使用 Controller 傳輸圖片與權重  
 - Datapath 包含單一個運算元件：MAC、ReLU、Comparator  
 - 降低硬體複雜度與靜態功耗，實現 Low Power 設計  
@@ -81,6 +82,7 @@
 
 ## Controller 架構
 <img width="622" height="745" alt="image" src="https://github.com/user-attachments/assets/2a26be0e-98e3-4981-9da3-e116f0e91a12" />
+
 - 包含五個 Sub Controller (Conv2d、ReLU、Maxpool 等)
 - 使用 Handshake Controller 控制通訊
 - Top Controller 根據 Start 信號觸發各層處理流程（Conv → ReLU → Maxpool x2 → FC → Predict）
@@ -118,6 +120,7 @@
 
 ### Comparator 設計
 <img width="928" height="495" alt="image" src="https://github.com/user-attachments/assets/8112e009-0347-4913-bf47-f31d95967529" />
+
 - 用於 Maxpool 與 ArgMax
 - 若當前輸入 > V_register，則更新最大值與其 Index
 
@@ -134,13 +137,13 @@
 
 ## 3. Area, Power, Leakage Power
 
-Advantage: MNIST Dataset without Preprocessing
-High Accuracy: Train Accuracy                           88%
-		    Validation Accuracy                   89%
-Area:                                                 13440.097 um2
-Frequency:                                           99.9703 MHz
-Dynamic Power:                                     2.463313 W
-Static Power:                                        2.383464 W (63.7974%)
+- Advantage: MNIST Dataset without Preprocessing
+- High Accuracy: Train Accuracy                           88%
+- 		    Validation Accuracy                   89%
+- Area:                                                 13440.097 um2
+- Frequency:                                           99.9703 MHz
+- Dynamic Power:                                     2.463313 W
+- Static Power:                                        2.383464 W (63.7974%)
 
 ---
 
